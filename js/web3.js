@@ -39,6 +39,7 @@ function buy() {
 			? web3.eth.accounts[0]
 			: '0x0000000000000000000000000000000000000001';
 			
+	var key = $("#lgeKey").val();
 	var amount = $("#lgeAmount").val();
 	if (amount.lastIndexOf(".") != -1) {
 		var dotPos = amount.lastIndexOf(".");
@@ -53,9 +54,9 @@ function buy() {
 		}
 	}
 	
-	contract.buyTokens.sendTransaction({
+	contract.buyTokens.sendTransaction(key, {
 		from: web3.eth.accounts[0],
-		value: amount
+		value: amount/100
 	 },function(error , result){
 		 if(!error)
 			 console.log(result);
