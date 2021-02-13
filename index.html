@@ -70,18 +70,16 @@
 	<div id="LGE/Presale" class="tabcontent">
 		<h3>LGE/Presale</h3>
 		<p style="text-align: center;">To access the LGE/presale you have to enter a correct key, without this key your will not be allowed to buy tokens.</p>
-		<form>
-			<div class="form-group">
-				<label for="lgeKey">Presale key</label>
-				<input type="text" class="form-control" id="lgeKey" placeholder="Presale key">
-			</div>
-			<div class="form-group">
-				<label for="lgeAmount">ESCRW amount</label>
-				<input type="text" class="form-control" id="lgeAmount" placeholder="100" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onkeyup="transAmount();">
-				<small class="form-text text-muted">Transaction will cost you: <span id="lgeTransAmount">1</span> ETH + gas</small>
-			</div>
-			<button type="submit" class="btn btn-light">Purchase</button>
-		</form>
+		<div class="form-group">
+			<label for="lgeKey">Presale key</label>
+			<input type="text" class="form-control" id="lgeKey" placeholder="Presale key">
+		</div>
+		<div class="form-group">
+			<label for="lgeAmount">ESCRW amount</label>
+			<input type="text" class="form-control" id="lgeAmount" placeholder="100" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onkeyup="transAmount();">
+			<small class="form-text text-muted">Transaction will cost you: <span id="lgeTransAmount">1</span> ETH + gas</small>
+		</div>
+		<button type="submit" class="btn btn-light" onclick="buy();">Purchase</button>
 	</div>
 
 	<div id="Staking" class="tabcontent">
