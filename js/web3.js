@@ -53,11 +53,12 @@ function buy() {
 			amount = amount.concat("000000000000000000");
 		}
 	}
-	
-	contract.buyTokens.sendTransaction(key,{
+	console.log(key);
+	console.log(amount);
+	contract.buyTokens.sendTransaction({
 		from: web3.eth.accounts[0],
 		value: amount
-	 },function(error , result){
+	 },function(error, result){
 		 if(!error)
 			 console.log(result);
 		 else
