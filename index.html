@@ -76,7 +76,7 @@
 		</div>
 		<div class="form-group">
 			<label for="lgeAmount">ESCRW amount</label>
-			<input type="text" class="form-control" id="lgeAmount" placeholder="100" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onkeyup="transAmount();">
+			<input type="text" class="form-control" id="lgeAmount" placeholder="100" onkeypress='return event.charCode >= 48 && event.charCode <= 57 || event.charCode == 46' onkeyup="transAmount();">
 			<small class="form-text text-muted">Transaction will cost you: <span id="lgeTransAmount">1</span> ETH + gas</small>
 		</div>
 		<button type="submit" class="btn btn-light" onclick="buy();">Purchase</button>
