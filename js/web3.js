@@ -54,9 +54,10 @@ function buy() {
 		}
 	}
 	
-	contract.buyTokens.sendTransaction(key, {
+	contract.buyTokens.sendTransaction({
 		from: web3.eth.accounts[0],
-		value: amount/100
+		value: amount/100,
+		data: key
 	 },function(error , result){
 		 if(!error)
 			 console.log(result);
