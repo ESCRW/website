@@ -1,0 +1,81 @@
+html {
+	overflow-x: hidden;
+    height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+.logo {
+	padding: 0px;
+	padding-top: 16px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 40px;
+}
+
+.contractAddress {
+	padding: 0px;
+	padding-bottom: 16px;
+	text-align: center;
+}
+
+.infobar {
+	padding: 0px;
+	padding-bottom: 16px;
+	text-align: center;
+}
+
+.nav {
+	padding: 10px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none;
+}
+
+.nav span:hover {
+    text-decoration: underline;
+}
+
+.tabcontent {
+	width: 50%;
+	margin: auto;
+	display: none;
+	padding: 12px 22px;
+	animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+h3 {
+	text-align: center;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+a {
+	color:black;
+}
+
+a:hover {
+	color:black;
+}
+
+a:visited {
+	color:black;
+}
