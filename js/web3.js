@@ -18,20 +18,20 @@ if (window.ethereum !== undefined) {
 };
 
 function buy() {
-	if ($(".lgeKey").val() == "") {
-		$(".lgeKey").css('box-shadow', '0px 0px 10px #CC0000');
-		$(".lgeKey").attr("placeholder", "INPUT KEY!");
+	if ($("#lgeKey").val() == "") {
+		$("#lgeKey").css('box-shadow', '0px 0px 10px #CC0000');
+		$("#lgeKey").attr("placeholder", "INPUT KEY!");
 		return;
 	} else {
-		$(".lgeKey").css('box-shadow', '0px 0px 0px #CC0000');
+		$("#lgeKey").css('box-shadow', '0px 0px 0px #CC0000');
 	}
 	
-	if ($(".lgeAmount").val() == "") {
-		$(".lgeAmount").css('box-shadow', '0px 0px 10px #CC0000');
-		$(".lgeAmount").attr("placeholder", "INPUT AMOUNT!");
+	if ($("#lgeAmount").val() == "") {
+		$("#lgeAmount").css('box-shadow', '0px 0px 10px #CC0000');
+		$("#lgeAmount").attr("placeholder", "INPUT AMOUNT!");
 		return;
 	} else {
-		$(".lgeAmount").css('box-shadow', '0px 0px 0px #CC0000');
+		$("#lgeAmount").css('box-shadow', '0px 0px 0px #CC0000');
 	}
 	
 	var account =
@@ -39,7 +39,7 @@ function buy() {
 			? web3.eth.accounts[0]
 			: '0x0000000000000000000000000000000000000001';
 			
-	var amount = $(".lgeAmount").val();
+	var amount = $("#lgeAmount").val();
 	if (amount.lastIndexOf(".") != -1) {
 		var dotPos = amount.lastIndexOf(".");
 		var amountOfZeroesNeeded = 18 - (amount.length - (dotPos+1));
